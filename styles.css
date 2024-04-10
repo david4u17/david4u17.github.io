@@ -62,7 +62,6 @@ body {
   line-height: 24px;
 }
 
-
 .reCaptcha a {
   text-decoration: none;
   color: inherit;
@@ -71,7 +70,6 @@ body {
 
 .create-btn {
   font-weight: 600;
-  /* or bold */
   background-color: #f93c91;
   width: 200px;
   border: none;
@@ -87,7 +85,6 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-
 input[type="checkbox"] {
   /* margin-top: 6px; */
   margin-right: 6px;
@@ -98,7 +95,6 @@ input[type="checkbox"] {
 span {
   display: inline-block;
 }
-
 
 .font {
   font-weight: 800;
@@ -123,7 +119,6 @@ span {
   flex-direction: column;
   justify-content: center;
 }
-
 
 
 /* Form styles */
@@ -178,11 +173,11 @@ input[type="password"] {
 /* Media queries for responsive design */
 @media (max-width: 767px) {
   .left-section {
-    display: none; /* Hide the image on mobile devices */
+    display: none; 
   }
 
   .right-section {
-    padding: 1rem; /* Reduce padding on smaller screens */
+    padding: 1rem; 
     margin-left: 1px;
     max-width: 100%;
     
@@ -203,9 +198,7 @@ input[type="password"] {
   }
 
   div.row {
-    /* display: -ms-flexbox; */
     display: flex;
-    /* -ms-flex-pack: justify; */
     justify-content: space-between;
 
   }
@@ -222,7 +215,7 @@ input[type="password"] {
 
   .top-right-text,
   .top-left-text {
-    position: static; /* Remove absolute positioning on smaller screens */
+    position: static; 
     margin-bottom: 1rem;
   }
 }
