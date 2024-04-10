@@ -136,14 +136,14 @@
       if (takenUsernames.includes(username)) {
         usernameError.style.display = 'block';
         usernameErrorIcon.style.display = 'inline-block';
-        usernameInput.style.backgroundcolor = 'red'; // Light red background color
+        // usernameInput.style.backgroundcolor = 'red'; 
         // usernameInput.style.color = 'red'; // Light red background color
 
         hasError = true;
       } else {
         usernameError.style.display = 'none';
         usernameErrorIcon.style.display = 'none';
-        usernameInput.style.backgroundcolor = ''; // Reset background color
+        usernameInput.style.backgroundcolor = ''; 
       }
 
       if (!hasError) {
