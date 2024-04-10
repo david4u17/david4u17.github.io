@@ -25,10 +25,6 @@
       margin-top: 20px;
     }
 
-    .font {
-      font-weight: 800;
-    }
-
     .finish-btn {
       font-weight: 600;
       margin-left: -40px;
@@ -88,18 +84,6 @@
       outline: none;
     }
 
-    .choose-m {
-      margin-left: 50px;
-    }
-
-    .profile-form {
-      max-width: 600px;
-    }
-
-    .location-width {
-      width: 600px;
-    }
-
     .option-container {
       display: flex;
     }
@@ -130,13 +114,11 @@
       margin: 0 auto;
     }
 
-
     .option-description {
       display: none;
       margin-top: 10px;
       text-align: center;
     }
-
 
     p {
       font-weight: 800;
@@ -147,10 +129,6 @@
       cursor: not-allowed;
     }
 
-    .button-wrapper {
-      /* margin-top: 80px; */
-    }
-
     .ftext {
       height: 30px;
       width: auto;
@@ -158,19 +136,15 @@
       margin-bottom: 10px;
     }
 
-
-
     #finishButtonMessage {
       color: #000000;
       display: none;
     }
 
     #finishText {
-
       color: #6e6d7a;
       display: none;
     }
-
 
 
     /* Hide the default checkbox */
@@ -239,9 +213,7 @@
     }
 
 
-
     @media (max-width: 767px) {
-
 
       .container {
         display: flex;
@@ -274,29 +246,18 @@
         margin-left: 70px;
       }
 
-      /* .profile-section {
+      .profile-section {
         flex: 1;
         padding: 3rem 0 0 0;
-        margin-left: 0;
         width: 100%;
         display: flex;
         flex-direction: column;
-      } */
-
-      .profile-section {
-  flex: 1;
-        padding: 3rem 0 0 0;
-  width: 100%; /* Ensure the container takes full width */
-  /* max-width: 500px; Limit the maximum width for better readability */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Start content from the top */
-  align-items: center;
-  overflow-y: auto; /* Enable vertical scrolling */
-}
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: auto;
+      }
 
       .profile-section p {
-
         font-weight: 600;
         font-size: 16px;
       }
@@ -361,8 +322,6 @@
           <img src="img/img1.jpg" alt="Image 1">
           <p>I'm a designer looking to share my work</p>
 
-          <p class="option-description" id="option1Description">Description for option 1</p>
-
           <label class="checkbox-container">
             <input type="checkbox" id="option1" onchange="handleCheckboxChange('option1')">
             <span class="checkmark"></span>
@@ -375,8 +334,6 @@
           <img src="img/img2.jpg" alt="Image 2">
           <p>I'm looking to hire a designer</p>
 
-          <p class="option-description" id="option2Description">Description for option 2</p>
-
           <label class="checkbox-container">
             <input type="checkbox" id="option2" onchange="handleCheckboxChange('option2')">
             <span class="checkmark"></span>
@@ -388,8 +345,6 @@
 
           <img src="img/img3.jpg" alt="Image 3">
           <p>I'm looking for design inspiration</p>
-
-          <p class="option-description" id="option3Description">Description for option 3</p>
 
           <label class="checkbox-container">
             <input type="checkbox" id="option3" onchange="handleCheckboxChange('option3')">
@@ -424,15 +379,12 @@
     function handleCheckboxChange(optionId) {
 
       var checkbox = document.getElementById(optionId);
-      var description = document.getElementById(optionId + 'Description');
       var optionBox = document.getElementById(optionId + 'Box');
 
       // Check if the checkbox is checked
       if (checkbox.checked) {
-        description.style.display = 'block';
         optionBox.style.borderColor = '#f93c91';
       } else {
-        description.style.display = 'none';
         optionBox.style.borderColor = '#e7e7e9';
       }
 
