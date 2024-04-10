@@ -106,15 +106,12 @@
   <!-- <script src="script.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
+    <script>
     const form = document.getElementById('signupForm');
     const usernameInput = document.getElementById('username');
     const usernameError = document.getElementById('usernameError');
     const usernameErrorIcon = document.getElementById('usernameErrorIcon');
     const takenUsernames = ['john', 'jane', 'bob'];
-
-
-    document.getElementById("username").style.color = 'red';
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -134,16 +131,15 @@
 
       // Check if username is taken
       if (takenUsernames.includes(username)) {
+
         usernameError.style.display = 'block';
         usernameErrorIcon.style.display = 'inline-block';
-        // usernameInput.style.backgroundcolor = 'red'; 
-        // usernameInput.style.color = 'red'; // Light red background color
 
         hasError = true;
+
       } else {
         usernameError.style.display = 'none';
         usernameErrorIcon.style.display = 'none';
-        usernameInput.style.backgroundcolor = ''; 
       }
 
       if (!hasError) {
@@ -152,6 +148,7 @@
       }
     });
   </script>
+
 
 </body>
 
