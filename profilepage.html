@@ -114,10 +114,13 @@
       margin: 0 auto;
     }
 
-    .option-description {
+     .option-description {
       display: none;
       margin-top: 10px;
       text-align: center;
+      font-size: 12px; 
+      font-weight: 600;
+      color: #6e6d7a;
     }
 
     p {
@@ -227,6 +230,20 @@
         margin-left: 20px;
       }
 
+       .option-description {
+      display: none;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px; 
+      font-weight: 600;
+      color: #6e6d7a;
+    }
+
+      .paragraph {
+        font-weight: 600;
+        font-size: 16px;
+      }
+
       .option-box {
         width: 250px;
         height: 250px;
@@ -254,11 +271,6 @@
         justify-content: flex-start;
         align-items: center;
         overflow-y: auto;
-      }
-
-      .profile-section p {
-        font-weight: 600;
-        font-size: 16px;
       }
 
       label {
@@ -307,16 +319,20 @@
 
       <h3>What brings you to Dribbble?</h3>
 
-      <p class="gray-text">Select the options that best describe you. Don't worry, you can explore other options later
+      <p class="gray-text paragraph">Select the options that best describe you. Don't worry, you can explore other options later
       </p>
 
 
       <div class="option-container mt-5">
 
+        <div class="option-container mt-5">
+
         <div class="option-box" id="option1Box">
 
-          <img src="img/img1.jpg" alt="Image 1">
-          <p>I'm a designer looking to share my work</p>
+          <img src="img/img1.jpg" id="option1Img" alt="Image 1">
+          <p class="paragraph" >I'm a designer looking to share my work</p>
+
+          <p class="option-description" id="option1Description"> With over 7 million shots from a vast community of designers. Dribbble is the leading source for design inspiration.</p>
 
           <label class="checkbox-container">
             <input type="checkbox" id="option1" onchange="handleCheckboxChange('option1')">
@@ -325,10 +341,12 @@
 
         </div>
 
-        <div class="option-box" id="option2Box">
+        <div class="option-box option-box23" id="option2Box">
 
-          <img src="img/img2.jpg" alt="Image 2">
-          <p>I'm looking to hire a designer</p>
+          <img src="img/img2.jpg" id="option2Img" alt="Image 2">
+          <p class="paragraph">I'm looking to hire a designer</p>
+
+          <p class="option-description" id="option2Description"> With over 7 million shots from a vast community of designers. Dribbble is the leading source for design inspiration.</p>
 
           <label class="checkbox-container">
             <input type="checkbox" id="option2" onchange="handleCheckboxChange('option2')">
@@ -337,10 +355,12 @@
 
         </div>
 
-        <div class="option-box" id="option3Box">
+        <div class="option-box option-box23" id="option3Box">
 
-          <img src="img/img3.jpg" alt="Image 3">
-          <p>I'm looking for design inspiration</p>
+          <img src="img/img3.jpg" id="option3Img" alt="Image 3">
+          <p class="paragraph"> I'm looking for design inspiration</p>
+
+          <p class="option-description" id="option3Description"> With over 7 million shots from a vast community of designers. Dribbble is the leading source for design inspiration.</p>
 
           <label class="checkbox-container">
             <input type="checkbox" id="option3" onchange="handleCheckboxChange('option3')">
@@ -375,13 +395,20 @@
     function handleCheckboxChange(optionId) {
 
       var checkbox = document.getElementById(optionId);
+      var description = document.getElementById(optionId + 'Description');
+      var image = document.getElementById(optionId + 'Img');
       var optionBox = document.getElementById(optionId + 'Box');
 
       // Check if the checkbox is checked
       if (checkbox.checked) {
+        description.style.display = 'block';
         optionBox.style.borderColor = '#f93c91';
+        image.style.marginTop = '-80px';
+
       } else {
+        description.style.display = 'none';
         optionBox.style.borderColor = '#e7e7e9';
+        image.style.marginTop = '0px';
       }
 
       // Check if at least one checkbox is checked
